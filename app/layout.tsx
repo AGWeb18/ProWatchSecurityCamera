@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ProMount Security Cameras | Residential & Commercial Installation Durham & Kawarthas",
-  description: "ProMount Security Cameras offers expert residential and commercial camera installation in the Kawarthas and Durham Region. Hardwired systems, no monthly fees.",
+  title:
+    "ProMount Security Cameras | Residential & Commercial Installation Durham & Kawarthas",
+  description:
+    "ProMount Security Cameras offers expert residential and commercial camera installation in the Kawarthas and Durham Region. Hardwired systems, no monthly fees.",
 };
 
 export default function RootLayout({
@@ -33,40 +36,42 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeSecurityService",
-              "name": "ProMount Security Cameras",
-              "image": "https://promountsecurity.ca/logo.png",
-              "description": "Professional residential and commercial security camera installation in the Kawarthas and Durham Region. No monthly fees, local recording, and mobile access setup.",
-              "telephone": "+1-705-530-2530",
-              "priceRange": "$$",
-              "areaServed": [
-                { "@type": "City", "name": "Whitby" },
-                { "@type": "City", "name": "Oshawa" },
-                { "@type": "City", "name": "Bowmanville" },
-                { "@type": "City", "name": "Port Perry" },
-                { "@type": "City", "name": "Peterborough" },
-                { "@type": "City", "name": "Lindsay" },
-                { "@type": "City", "name": "Lakefield" },
-                { "@type": "City", "name": "Fenelon Falls" },
-                { "@type": "City", "name": "Coboconk" }
+              name: "ProMount Security Cameras",
+              image: "https://promountsecurity.ca/logo.png",
+              description:
+                "Professional residential and commercial security camera installation in the Kawarthas and Durham Region. No monthly fees, local recording, and mobile access setup.",
+              telephone: "+1-705-530-2530",
+              priceRange: "$$",
+              areaServed: [
+                { "@type": "City", name: "Whitby" },
+                { "@type": "City", name: "Oshawa" },
+                { "@type": "City", name: "Bowmanville" },
+                { "@type": "City", name: "Port Perry" },
+                { "@type": "City", name: "Peterborough" },
+                { "@type": "City", name: "Lindsay" },
+                { "@type": "City", name: "Lakefield" },
+                { "@type": "City", name: "Fenelon Falls" },
+                { "@type": "City", name: "Coboconk" },
               ],
-              "openingHoursSpecification": {
+              openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
+                dayOfWeek: [
                   "Monday",
                   "Tuesday",
                   "Wednesday",
                   "Thursday",
                   "Friday",
-                  "Saturday"
+                  "Saturday",
                 ],
-                "opens": "08:00",
-                "closes": "18:00"
+                opens: "08:00",
+                closes: "18:00",
               },
-              "url": "https://promountsecurity.ca"
+              url: "https://promountsecurity.ca",
             }),
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
