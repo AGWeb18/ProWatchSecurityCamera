@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,11 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-
   title: "ProMount Security Cameras | Ontario, Canada | Durham & Kawarthas",
 
-  description: "Expert security camera installation serving Durham Region and the Kawarthas. Wired & Wire-Free systems for home and business.",
-
+  description:
+    "Expert security camera installation serving Durham Region and the Kawarthas. Wired & Wire-Free systems for home and business.",
 };
 
 export default function RootLayout({
@@ -73,6 +72,7 @@ export default function RootLayout({
         />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
