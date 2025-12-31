@@ -164,10 +164,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                All-In-One Packages
+                Home & Business Packages
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600 font-semibold">
-                Hardware, installation, and setup are ALL included. Choose between Wired or Wireless options.
+                Hardware, installation, and setup are ALL included. Choose between Wired or Wireless options for your property.
               </p>
             </div>
 
@@ -353,53 +353,6 @@ export default function Home() {
                   {town}
                 </span>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Commercial Section */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32">
-          <div className="rounded-3xl bg-gray-900 py-10 px-6 sm:py-16 sm:px-12 lg:flex lg:items-center lg:justify-between border border-gray-800 shadow-2xl">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Commercial & Business Solutions
-              </h2>
-              <p className="mt-4 text-lg text-gray-400">
-                Protect your job site, office, or retail space. We offer custom
-                commercial installations including:
-              </p>
-              <ul className="mt-6 space-y-3 text-gray-300">
-                <li className="flex gap-x-3">
-                  <CheckIcon /> Hardwired & PoE systems
-                </li>
-                <li className="flex gap-x-3">
-                  <CheckIcon /> Multi-site management from one app
-                </li>
-                <li className="flex gap-x-3">
-                  <CheckIcon /> High-traffic retail monitoring
-                </li>
-                <li className="flex gap-x-3">
-                  <CheckIcon /> Parking lot & perimeter license plate reading
-                </li>
-              </ul>
-            </div>
-            <div className="mt-10 flex w-full max-w-sm flex-col items-center justify-center gap-6 lg:mt-0 lg:flex-row">
-              <div className="text-center">
-                <p className="text-base font-semibold text-gray-300">
-                  Starting at
-                </p>
-                <p className="mt-2 flex items-baseline justify-center gap-x-1">
-                  <span className="text-5xl font-bold tracking-tight text-white">
-                    Custom
-                  </span>
-                </p>
-                <a
-                  href="tel:17055302530"
-                  className="mt-6 block rounded-md bg-blue-600 px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                >
-                  Call for Quote
-                </a>
-              </div>
             </div>
           </div>
         </div>
