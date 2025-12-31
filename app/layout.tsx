@@ -16,8 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title:
     "ProMount Security Cameras | Residential & Commercial Installation Durham & Kawarthas",
-  description:
-    "ProMount Security Cameras offers expert residential and commercial camera installation in the Kawarthas and Durham Region. Hardwired systems, no monthly fees.",
+    description: "ProMount Security Cameras offers expert residential and commercial camera installation in the Kawarthas and Durham Region. Wired & Wire-Free systems, no monthly fees.",
 };
 
 export default function RootLayout({

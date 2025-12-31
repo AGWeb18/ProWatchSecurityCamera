@@ -72,13 +72,13 @@ export default function Home() {
           <div className="mx-auto max-w-2xl py-24 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                Smart Home Security,{" "}
+                Professional Security,{" "}
                 <span className="text-blue-600 text-nowrap">Simplified.</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Professional camera installation for your home or cottage.
+                Expert camera installation for your home, business, or cottage.
                 Serving <strong>Durham Region</strong> and the{" "}
-                <strong>Kawarthas</strong> with reliable, expert service.
+                <strong>Kawarthas</strong> with reliable, professional service.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                 <a
@@ -127,8 +127,8 @@ export default function Home() {
                   I realized that after my aunt, uncle, and cousins all
                   struggled to set it up, there was a massive gap. While the
                   hardware exists, the <strong>bridge</strong> between buying a
-                  camera and actually having it work reliably for the whole
-                  family is missing for many people.
+                  camera and actually having it work reliably for you and your staff/family is missing for many
+                  people.
                 </p>
                 <p>
                   ProMount Security Cameras was built to provide that bridge. We
@@ -149,7 +149,7 @@ export default function Home() {
                   <CheckIcon /> Full ownership of your data.
                 </li>
                 <li className="flex gap-x-3 text-gray-700 font-medium">
-                  <CheckIcon /> Weather-proof, high-definition hardware.
+                  <CheckIcon /> Wired & Wire-Free Options Available.
                 </li>
                 <li className="flex gap-x-3 text-gray-700 font-medium">
                   <CheckIcon /> Professional app setup on all your devices.
@@ -167,8 +167,7 @@ export default function Home() {
                 All-In-One Packages
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600 font-semibold">
-                Hardware, installation, and setup are ALL included. No hidden
-                equipment costs, ever.
+                Hardware, installation, and setup are ALL included. Choose between Wired or Wireless options.
               </p>
             </div>
 
@@ -180,7 +179,7 @@ export default function Home() {
                     Basic Watch
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-gray-600">
-                    Essential protection for your home&apos;s primary entry points.
+                    Essential protection for your property&apos;s primary entry points.
                   </p>
                   <p className="mt-6 flex items-baseline gap-x-1">
                     <span className="text-4xl font-bold tracking-tight text-gray-900">
@@ -229,7 +228,7 @@ export default function Home() {
                     Standard Guard
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-gray-600">
-                    Comprehensive coverage for most detached homes.
+                    Comprehensive coverage for most properties.
                   </p>
                   <p className="mt-6 flex items-baseline gap-x-1">
                     <span className="text-4xl font-bold tracking-tight text-gray-900">
@@ -279,7 +278,7 @@ export default function Home() {
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-gray-600">
                     Maximum security for larger properties and extended
-                    families.
+                    coverage needs.
                   </p>
                   <p className="mt-6 flex items-baseline gap-x-1">
                     <span className="text-4xl font-bold tracking-tight text-gray-900">
@@ -300,7 +299,7 @@ export default function Home() {
                       <CheckIcon /> 6 Outdoor HD Cameras
                     </li>
                     <li className="flex gap-x-3">
-                      <CheckIcon /> 6 Users (Owner + 5 Family)
+                      <CheckIcon /> 6 Users (Owner + 5 Family/Staff)
                     </li>
                     <li className="flex gap-x-3">
                       <CheckIcon /> Priority Support
@@ -358,6 +357,53 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Commercial Section */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32">
+          <div className="rounded-3xl bg-gray-900 py-10 px-6 sm:py-16 sm:px-12 lg:flex lg:items-center lg:justify-between border border-gray-800 shadow-2xl">
+            <div className="max-w-xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Commercial & Business Solutions
+              </h2>
+              <p className="mt-4 text-lg text-gray-400">
+                Protect your job site, office, or retail space. We offer custom
+                commercial installations including:
+              </p>
+              <ul className="mt-6 space-y-3 text-gray-300">
+                <li className="flex gap-x-3">
+                  <CheckIcon /> Hardwired & PoE systems
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon /> Multi-site management from one app
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon /> High-traffic retail monitoring
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon /> Parking lot & perimeter license plate reading
+                </li>
+              </ul>
+            </div>
+            <div className="mt-10 flex w-full max-w-sm flex-col items-center justify-center gap-6 lg:mt-0 lg:flex-row">
+              <div className="text-center">
+                <p className="text-base font-semibold text-gray-300">
+                  Starting at
+                </p>
+                <p className="mt-2 flex items-baseline justify-center gap-x-1">
+                  <span className="text-5xl font-bold tracking-tight text-white">
+                    Custom
+                  </span>
+                </p>
+                <a
+                  href="tel:17055302530"
+                  className="mt-6 block rounded-md bg-blue-600 px-8 py-3 text-center text-base font-bold text-white shadow-lg hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Call for Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* FAQ Section */}
         <div id="faq" className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
@@ -382,20 +428,18 @@ export default function Home() {
               </dt>
               <dd className="mt-4 lg:col-span-7 lg:mt-0">
                 <p className="text-base leading-7 text-gray-600">
-                  Yes. We use hardware specifically rated for Canadian winters,
-                  ensuring reliable operation even in sub-zero temperatures
-                  common in the Kawarthas.
+                  Yes. We use outdoor-rated cameras designed for Canadian winters. For high-traffic areas, we recommend our Solar-Assist add-on to keep batteries charged even in sub-zero temperatures.
                 </p>
               </dd>
             </div>
             <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
               <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-                Can multiple family members have access?
+                Can multiple users have access?
               </dt>
               <dd className="mt-4 lg:col-span-7 lg:mt-0">
                 <p className="text-base leading-7 text-gray-600">
                   Absolutely. As part of our setup, we will help you invite
-                  family members so everyone can keep an eye on things from
+                  family members or staff so everyone can keep an eye on things from
                   their own phones.
                 </p>
               </dd>
