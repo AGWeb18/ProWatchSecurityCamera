@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function CheckIcon() {
   return (
@@ -27,11 +28,16 @@ export default function Home() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a
-              href="#"
-              className="-m-1.5 p-1.5 text-2xl font-black tracking-tight text-blue-900 uppercase"
-            >
-              ProMount<span className="text-blue-600">.</span>
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">ProMount Security Cameras</span>
+              <Image
+                src="/ProMountSecurityCameraLogo.png"
+                alt="ProMount Security Cameras"
+                width={200}
+                height={80}
+                className="h-16 w-auto"
+                priority
+              />
             </a>
           </div>
           <div className="hidden lg:flex lg:gap-x-8">
@@ -71,28 +77,64 @@ export default function Home() {
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-2xl py-24 sm:py-32">
             <div className="text-center">
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                Professional Security,{" "}
-                <span className="text-blue-600 text-nowrap">Simplified.</span>
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                See Your Property{" "}
+                <span className="text-blue-600 text-nowrap">Clearly</span>
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Expert camera installation for your home, business, or cottage.
-                Serving <strong>Durham Region</strong> and the{" "}
-                <strong>Kawarthas</strong> with reliable, professional service.
+              <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
+                Professional security camera installation for homes, businesses
+                & cottages.
               </p>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+              <p className="mt-2 text-sm sm:text-base text-blue-600 font-semibold">
+                Serving Durham Region & the Kawarthas
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
                 <a
-                  href="tel:17055302530"
-                  className="w-full sm:w-auto rounded-full bg-blue-600 px-8 py-3.5 text-base font-bold text-white shadow-lg hover:bg-blue-500 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  href="#pricing"
+                  className="w-full sm:w-auto rounded-full bg-blue-600 px-6 sm:px-8 py-3 sm:py-3.5 text-base font-bold text-white shadow-lg hover:bg-blue-500 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-center"
                 >
-                  Call (705) 530-2530
+                  Choose Your Package
                 </a>
                 <a
                   href="#pricing"
-                  className="text-sm font-semibold leading-6 text-gray-900"
+                  className="w-full sm:w-auto rounded-full bg-gray-100 px-6 sm:px-8 py-3 sm:py-3.5 text-base font-semibold text-gray-900 hover:bg-gray-200 transition text-center"
                 >
-                  View Packages <span aria-hidden="true">→</span>
+                  View Packages
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Testimonials Section */}
+        <div className="bg-blue-50 border-t border-b border-blue-100 py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest">
+                Trusted By Our Customers
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="h-5 w-5 text-yellow-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 text-sm leading-6 mb-4">
+                  &quot;Had this installed for my aging parents for their
+                  security. The service was excellent and took the time to
+                  answer all my questions. Thank you for a job well done.&quot;
+                </p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Google Review
+                </p>
               </div>
             </div>
           </div>
@@ -101,17 +143,17 @@ export default function Home() {
         {/* Story Section */}
         <div
           id="about"
-          className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32"
+          className="mx-auto max-w-7xl px-6 lg:px-8 py-20 sm:py-28"
         >
-          <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16 items-center">
+          <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-16 items-center">
             <div>
-              <h2 className="text-base font-semibold leading-7 text-blue-600 uppercase tracking-widest">
-                About ProMount Security Cameras
+              <h2 className="text-sm font-semibold leading-7 text-blue-600 uppercase tracking-widest">
+                Why Choose ProMount
               </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Born from a family need.
+              <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Built on experience. Focused on your peace of mind.
               </p>
-              <div className="mt-6 space-y-4 text-lg leading-8 text-gray-600">
+              <div className="mt-6 space-y-3 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
                 <p>
                   It started when I installed an exterior security system for my
                   95-year-old grandpa. My aunt and uncle wanted to keep an eye
@@ -137,22 +179,22 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-blue-50 rounded-3xl p-8 lg:p-12 border border-blue-100">
-              <h3 className="font-bold text-blue-900 text-xl mb-4">
-                The ProMount Security Cameras Promise
+            <div className="bg-blue-50 rounded-2xl p-6 sm:p-8 border border-blue-100">
+              <h3 className="font-bold text-blue-900 text-lg sm:text-xl mb-4">
+                The ProMount Promise
               </h3>
-              <ul className="space-y-4">
-                <li className="flex gap-x-3 text-gray-700 font-medium">
-                  <CheckIcon /> No confusing monthly subscriptions.
+              <ul className="space-y-3">
+                <li className="flex gap-x-3 text-gray-700 font-medium text-sm sm:text-base">
+                  <CheckIcon /> No monthly subscriptions
                 </li>
-                <li className="flex gap-x-3 text-gray-700 font-medium">
-                  <CheckIcon /> Full ownership of your data.
+                <li className="flex gap-x-3 text-gray-700 font-medium text-sm sm:text-base">
+                  <CheckIcon /> You own your data
                 </li>
-                <li className="flex gap-x-3 text-gray-700 font-medium">
-                  <CheckIcon /> Wired & Wire-Free Options Available.
+                <li className="flex gap-x-3 text-gray-700 font-medium text-sm sm:text-base">
+                  <CheckIcon /> Wired & wireless options
                 </li>
-                <li className="flex gap-x-3 text-gray-700 font-medium">
-                  <CheckIcon /> Professional app setup on all your devices.
+                <li className="flex gap-x-3 text-gray-700 font-medium text-sm sm:text-base">
+                  <CheckIcon /> Multi-device app setup
                 </li>
               </ul>
             </div>
@@ -160,183 +202,180 @@ export default function Home() {
         </div>
 
         {/* Pricing Section */}
-        <div id="pricing" className="bg-gray-50 py-24 sm:py-32">
+        <div id="pricing" className="bg-gray-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Home & Business Packages
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Simple, Transparent Pricing
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600 font-semibold">
-                Hardware, installation, and setup are ALL included. Choose
-                between Wired or Wireless options for your property.
+              <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
+                Hardware, installation, and setup included. All packages are
+                fully installed.
               </p>
             </div>
 
-            <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-12 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+            <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-6 sm:gap-8 lg:max-w-none lg:grid-cols-3 lg:gap-6">
               {/* Basic Tier */}
-              <div className="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 shadow-sm">
+              <div className="flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 ring-1 ring-gray-200 shadow-sm">
                 <div>
-                  <h3 className="text-lg font-semibold leading-8 text-gray-900">
+                  <h3 className="text-base sm:text-lg font-semibold leading-7 text-gray-900">
                     Basic Watch
                   </h3>
-                  <p className="mt-4 text-sm leading-6 text-gray-600">
-                    Essential protection for your property&apos;s primary entry
-                    points.
+                  <p className="mt-2 text-xs sm:text-sm leading-5 text-gray-600">
+                    Essential protection for entry points.
                   </p>
-                  <p className="mt-6 flex items-baseline gap-x-1">
-                    <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  <p className="mt-4 flex items-baseline gap-x-1">
+                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
                       $599
                     </span>
-                    <span className="text-sm font-semibold leading-6 text-gray-600">
+                    <span className="text-xs sm:text-sm font-semibold leading-6 text-gray-600">
                       CAD
                     </span>
                   </p>
                   <ul
                     role="list"
-                    className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                    className="mt-6 space-y-2 text-xs sm:text-sm leading-5 text-gray-600"
                   >
-                    <li className="flex gap-x-3 text-blue-600 font-bold">
+                    <li className="flex gap-x-2 text-blue-600 font-bold">
                       <CheckIcon /> Equipment Included
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 2 Outdoor HD Cameras
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 2 HD Cameras
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> Single User Access
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> Single User
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> Mobile App Setup
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> App Setup
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 1-Year Workmanship Warranty
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 1-Year Warranty
                     </li>
                   </ul>
                 </div>
                 <a
                   href="tel:17055302530"
-                  className="mt-8 block rounded-md bg-blue-50 px-3 py-2 text-center text-sm font-semibold leading-6 text-blue-600 shadow-sm hover:bg-blue-100"
+                  className="mt-6 block rounded-md bg-blue-50 px-3 py-2 text-center text-xs sm:text-sm font-semibold leading-6 text-blue-600 shadow-sm hover:bg-blue-100"
                 >
                   Call to Book
                 </a>
               </div>
 
               {/* Standard Tier */}
-              <div className="flex flex-col justify-between rounded-3xl bg-white p-8 ring-2 ring-blue-600 xl:p-10 shadow-xl relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-4 py-1 text-xs font-bold text-white uppercase tracking-widest">
-                  Most Popular
+              <div className="flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 ring-2 ring-blue-600 shadow-xl relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white uppercase tracking-widest">
+                  Popular
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold leading-8 text-gray-900">
+                  <h3 className="text-base sm:text-lg font-semibold leading-7 text-gray-900">
                     Standard Guard
                   </h3>
-                  <p className="mt-4 text-sm leading-6 text-gray-600">
-                    Comprehensive coverage for most properties.
+                  <p className="mt-2 text-xs sm:text-sm leading-5 text-gray-600">
+                    Coverage for most properties.
                   </p>
-                  <p className="mt-6 flex items-baseline gap-x-1">
-                    <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  <p className="mt-4 flex items-baseline gap-x-1">
+                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
                       $899
                     </span>
-                    <span className="text-sm font-semibold leading-6 text-gray-600">
+                    <span className="text-xs sm:text-sm font-semibold leading-6 text-gray-600">
                       CAD
                     </span>
                   </p>
                   <ul
                     role="list"
-                    className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                    className="mt-6 space-y-2 text-xs sm:text-sm leading-5 text-gray-600"
                   >
-                    <li className="flex gap-x-3 text-blue-600 font-bold">
+                    <li className="flex gap-x-2 text-blue-600 font-bold">
                       <CheckIcon /> Equipment Included
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 4 Outdoor HD Cameras
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 4 HD Cameras
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 3 Users (Owner + 2 Family)
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 3 Users
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> Multi-Device App Setup
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> Multi-Device Setup
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 1-Year Workmanship Warranty
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 1-Year Warranty
                     </li>
-                    <li className="flex gap-x-3 text-blue-600 font-semibold">
-                      <CheckIcon /> 24/7 Local Recording
+                    <li className="flex gap-x-2 text-blue-600 font-semibold">
+                      <CheckIcon /> 24/7 Recording
                     </li>
                   </ul>
                 </div>
                 <a
                   href="tel:17055302530"
-                  className="mt-8 block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="mt-6 block rounded-md bg-blue-600 px-3 py-2 text-center text-xs sm:text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Call to Book
                 </a>
               </div>
 
               {/* Premium Tier */}
-              <div className="flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10 shadow-sm">
+              <div className="flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 ring-1 ring-gray-200 shadow-sm">
                 <div>
-                  <h3 className="text-lg font-semibold leading-8 text-gray-900">
+                  <h3 className="text-base sm:text-lg font-semibold leading-7 text-gray-900">
                     Premium Shield
                   </h3>
-                  <p className="mt-4 text-sm leading-6 text-gray-600">
-                    Maximum security for larger properties and extended coverage
-                    needs.
+                  <p className="mt-2 text-xs sm:text-sm leading-5 text-gray-600">
+                    Maximum security for larger properties.
                   </p>
-                  <p className="mt-6 flex items-baseline gap-x-1">
-                    <span className="text-4xl font-bold tracking-tight text-gray-900">
+                  <p className="mt-4 flex items-baseline gap-x-1">
+                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
                       $1,299
                     </span>
-                    <span className="text-sm font-semibold leading-6 text-gray-600">
+                    <span className="text-xs sm:text-sm font-semibold leading-6 text-gray-600">
                       CAD
                     </span>
                   </p>
                   <ul
                     role="list"
-                    className="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+                    className="mt-6 space-y-2 text-xs sm:text-sm leading-5 text-gray-600"
                   >
-                    <li className="flex gap-x-3 text-blue-600 font-bold">
+                    <li className="flex gap-x-2 text-blue-600 font-bold">
                       <CheckIcon /> Equipment Included
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 6 Outdoor HD Cameras
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 6 HD Cameras
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 6 Users (Owner + 5 Family/Staff)
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 6 Users
                     </li>
-                    <li className="flex gap-x-3">
+                    <li className="flex gap-x-2">
                       <CheckIcon /> Priority Support
                     </li>
-                    <li className="flex gap-x-3">
-                      <CheckIcon /> 2-Year Workmanship Warranty
+                    <li className="flex gap-x-2">
+                      <CheckIcon /> 2-Year Warranty
                     </li>
-                    <li className="flex gap-x-3 text-blue-600 font-semibold">
-                      <CheckIcon /> Advanced Motion Detection Setup
+                    <li className="flex gap-x-2 text-blue-600 font-semibold">
+                      <CheckIcon /> Advanced Detection
                     </li>
                   </ul>
                 </div>
                 <a
                   href="tel:17055302530"
-                  className="mt-8 block rounded-md bg-blue-50 px-3 py-2 text-center text-sm font-semibold leading-6 text-blue-600 shadow-sm hover:bg-blue-100"
+                  className="mt-6 block rounded-md bg-blue-50 px-3 py-2 text-center text-xs sm:text-sm font-semibold leading-6 text-blue-600 shadow-sm hover:bg-blue-100"
                 >
                   Call to Book
                 </a>
               </div>
             </div>
 
-            <p className="mt-12 text-center text-gray-500 text-sm italic">
-              Need more cameras? Custom 6 and 8 camera setups available upon
-              request.
+            <p className="mt-8 text-center text-gray-500 text-xs sm:text-sm">
+              Custom setups available. Call for details.
             </p>
           </div>
         </div>
 
         {/* Service Area */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 border-t border-gray-100">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-20 border-t border-gray-100">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-              Proudly Serving Our Local Community
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900">
+              Serving Our Local Community
             </h2>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
               {[
                 "Whitby",
                 "Oshawa",
@@ -350,7 +389,7 @@ export default function Home() {
               ].map((town) => (
                 <span
                   key={town}
-                  className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 border border-blue-100"
+                  className="rounded-full bg-blue-50 px-3 sm:px-4 py-1 text-xs sm:text-sm font-medium text-blue-700 border border-blue-100"
                 >
                   {town}
                 </span>
@@ -360,77 +399,120 @@ export default function Home() {
         </div>
 
         {/* FAQ Section */}
-        <div id="faq" className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-            Frequently Asked Questions
+        <div id="faq" className="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-24">
+          <h2 className="text-xl sm:text-2xl font-bold leading-10 tracking-tight text-gray-900">
+            Common Questions
           </h2>
-          <dl className="mt-10 space-y-8 divide-y divide-gray-900/10">
-            <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
+          <dl className="mt-8 space-y-6 divide-y divide-gray-900/10">
+            <div className="pt-6 sm:grid sm:grid-cols-12 sm:gap-8">
+              <dt className="text-sm sm:text-base font-semibold leading-7 text-gray-900 sm:col-span-5">
                 Are there monthly fees?
               </dt>
-              <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                <p className="text-base leading-7 text-gray-600">
-                  No. We prefer systems that record locally or use free cloud
-                  tiers. Once you pay for the install, you own the system and
-                  your data.
+              <dd className="mt-3 sm:col-span-7 sm:mt-0">
+                <p className="text-sm sm:text-base leading-6 text-gray-600">
+                  No. You own the system and your data. No subscriptions
+                  required.
                 </p>
               </dd>
             </div>
-            <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
-                Do the cameras work in the winter?
+            <div className="pt-6 sm:grid sm:grid-cols-12 sm:gap-8">
+              <dt className="text-sm sm:text-base font-semibold leading-7 text-gray-900 sm:col-span-5">
+                Do cameras work in winter?
               </dt>
-              <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                <p className="text-base leading-7 text-gray-600">
-                  Yes. We use outdoor-rated cameras designed for Canadian
-                  winters. For high-traffic areas, we recommend our Solar-Assist
-                  add-on to keep batteries charged even in sub-zero
-                  temperatures.
+              <dd className="mt-3 sm:col-span-7 sm:mt-0">
+                <p className="text-sm sm:text-base leading-6 text-gray-600">
+                  Yes. We use Canadian-rated outdoor cameras. Solar-assist
+                  add-ons available for extreme conditions.
                 </p>
               </dd>
             </div>
-            <div className="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
-              <dt className="text-base font-semibold leading-7 text-gray-900 lg:col-span-5">
+            <div className="pt-6 sm:grid sm:grid-cols-12 sm:gap-8">
+              <dt className="text-sm sm:text-base font-semibold leading-7 text-gray-900 sm:col-span-5">
                 Can multiple users have access?
               </dt>
-              <dd className="mt-4 lg:col-span-7 lg:mt-0">
-                <p className="text-base leading-7 text-gray-600">
-                  Absolutely. As part of our setup, we will help you invite
-                  family members or staff so everyone can keep an eye on things
-                  from their own phones.
+              <dd className="mt-3 sm:col-span-7 sm:mt-0">
+                <p className="text-sm sm:text-base leading-6 text-gray-600">
+                  Absolutely. We set up family and staff access during
+                  installation.
+                </p>
+              </dd>
+            </div>
+            <div className="pt-6 sm:grid sm:grid-cols-12 sm:gap-8">
+              <dt className="text-sm sm:text-base font-semibold leading-7 text-gray-900 sm:col-span-5">
+                How long does installation take?
+              </dt>
+              <dd className="mt-3 sm:col-span-7 sm:mt-0">
+                <p className="text-sm sm:text-base leading-6 text-gray-600">
+                  Most installations take 2-4 hours. We&apos;ll confirm timing
+                  during your free quote call.
+                </p>
+              </dd>
+            </div>
+            <div className="pt-6 sm:grid sm:grid-cols-12 sm:gap-8">
+              <dt className="text-sm sm:text-base font-semibold leading-7 text-gray-900 sm:col-span-5">
+                What&apos;s included in installation?
+              </dt>
+              <dd className="mt-3 sm:col-span-7 sm:mt-0">
+                <p className="text-sm sm:text-base leading-6 text-gray-600">
+                  Equipment, professional installation, app setup on all
+                  devices, and a 1-2 year warranty.
                 </p>
               </dd>
             </div>
           </dl>
         </div>
 
+        {/* CTA Section */}
+        <div className="bg-blue-600 py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              Ready to Protect Your Property?
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-blue-100">
+              Choose your package and call to book your installation.
+            </p>
+            <a
+              href="#pricing"
+              className="mt-6 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-blue-600 hover:bg-gray-100 transition"
+            >
+              View Packages
+            </a>
+          </div>
+        </div>
+
         {/* Footer */}
-        <footer className="bg-gray-900 py-12">
+        <footer className="bg-gray-900 py-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-              <span className="text-xl font-bold text-white tracking-tight uppercase">
+            <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+              <span className="text-lg font-bold text-white tracking-tight uppercase">
                 ProMount<span className="text-blue-500">.</span>
               </span>
-              <p className="text-sm text-gray-400 text-center">
+              <p className="text-xs sm:text-sm text-gray-400 text-center">
                 &copy; {new Date().getFullYear()} ProMount Security Cameras.
-                Professional Installation in Durham & Kawarthas.
-              </p>{" "}
-              <div className="flex flex-col items-center md:items-end">
-                <a
-                  href="tel:17055302530"
-                  className="text-lg font-bold text-white hover:text-blue-400 transition"
-                >
-                  (705) 530-2530
-                </a>
-                <span className="text-gray-500 text-xs mt-1">
-                  Call for a free quote
-                </span>
-              </div>
+              </p>
+              <a
+                href="tel:17055302530"
+                className="text-base font-bold text-white hover:text-blue-400 transition"
+              >
+                (705) 530-2530
+              </a>
             </div>
           </div>
         </footer>
       </main>
+
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-lg">
+        <a
+          href="#pricing"
+          className="block w-full px-6 py-3 text-center bg-blue-600 text-white font-bold hover:bg-blue-500 transition"
+        >
+          Book Now
+        </a>
+      </div>
+
+      {/* Padding for sticky mobile CTA */}
+      <div className="h-16 lg:hidden" />
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HomeSecurityService",
               name: "ProMount Security Cameras",
-              image: "https://promountsecurity.ca/logo.png",
+              image: "https://promountsecurity.ca/ProMountSecurityCameraLogo.png",
               description:
                 "Professional residential and commercial security camera installation in the Kawarthas and Durham Region. No monthly fees, local recording, and mobile access setup.",
               telephone: "+1-705-530-2530",
